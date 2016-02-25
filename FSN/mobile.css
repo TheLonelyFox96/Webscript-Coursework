@@ -1,0 +1,96 @@
+
+
+@media screen and (max-width: 1100px) {
+
+  nav {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    display: list-item;
+    position: fixed;
+    width: 100%;
+    background: #04CCAA;
+    top: 0;
+    margin-bottom: 10px;
+    margin-right: 3px;
+    height: 60px;
+  }
+
+  #homepic {
+    background: url("images/alex.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 400px;
+    height: 385px;
+    margin: 10px auto;
+  }
+  .menu-button {
+    display: block;
+  }
+
+  .menu-dropdown {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    z-index: 100;
+    right: 40px;
+  }
+
+  .menu-button:hover .menu-dropdown, .menu-dropdown:hover .menu-dropdown {
+    display: block;
+    background: blue;
+  }
+
+  a.menu {
+    display: block;
+  }
+
+.menu-dropdown a{
+  display: block;
+  width: 30%;
+  text-align: center;
+  font: bold 14px/50px;
+  background-color:#8BD3EE;
+  color: black;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+ a {
+    display: none;
+    width: 30%;
+    text-align: center;
+    font: bold 14px/50px;
+    background-color:#8BD3EE;
+    color: black;
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+
+  a.button:hover{
+    background: none;
+    color: black;
+  }
+
+  #content {
+    margin-top:  100px;
+  }
+
+  #pageborder{
+      margin-left: auto;        /* auto sets equal distance each side of border */
+      border-radius: 25px;
+      border: 2px solid #2E8B57;
+      padding: 20px;
+      width: 90%;
+      height: 1100px;
+  }
+
+  #chatbox{
+    float: none;
+    margin-top: 650px;   /* auto sets equal distance each side of border */
+    border-radius: 25px;
+    border: 2px solid #2E8B57;
+    padding: 20px;
+    width: 400px;
+    height: 360px;
+  }
+}

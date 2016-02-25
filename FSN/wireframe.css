@@ -1,0 +1,276 @@
+
+*{
+  font-family: 'Monda', sans-serif;
+}
+html{
+  background: #e6e6e6;
+
+}
+nav {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  display: block;
+  position: fixed;
+  width: 100%;
+  background: #04CCAA;
+  top: 0;
+  margin-bottom: 10px;
+  margin-right: 3px;
+  height: 60px;
+}
+
+#navigation {
+  float: right;
+  width: 58%;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+#navigation a {
+  padding-left: 15px;
+  text-align: center;
+  font: bold 14px/50px;
+  color: black;
+}
+
+#navigation a.button {
+  text-decoration: none;
+
+}
+
+#navigation a.button:hover{
+  background: none;
+  color: white;
+}
+
+
+.menu-button {
+  display: none;
+  position: absolute;
+  right: 30px;
+  background: url(images/menu.png) no-repeat;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.menu-dropdown {
+  display: none;
+}
+
+.dropdwnButton {
+  display: none;
+  background-color: #04CCAA;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+
+}
+
+#content {
+  margin-top: 90px;
+  color: #04CCAA;
+}
+
+/* input boxes on login */
+input[type="text"],
+input[type="password"]{         /* design by http://callmenick.com/post/
+                                    various-css-input-text-styles */
+  padding: 10px;
+  border: none;
+  border-bottom: solid 2px #c9c9c9;
+  transition: border 0.3s;
+  margin-top: 15px;
+}
+input[type="text"]:focus,
+input[type="text"].focus,
+input[type="password"]:focus,
+input[type="password"].focus {
+  border-bottom: solid 2px #04CCAA;
+  outline:0;
+
+}
+
+
+
+/* login and logout buttons */
+
+input[type="submit"] {
+  margin-top: 20px;
+  background-color: white;
+    color: black;
+    border: 2px solid #04CCAA;
+}
+
+input[type="submit"]:hover {
+    background-color: #04CCAA; /* Green */
+    color: white;
+}
+
+p {
+  font: bold 15px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+
+
+/* box border of content on pages */
+#pageborder{
+    margin:0 auto;        /* auto sets equal distance each side of border */
+    border-radius: 25px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    background-color: white;
+    padding: 20px;
+    width: 900px;
+    height: 630px;
+}
+
+/* sets box border around content on League table page */
+#tablePageBorder{
+  margin:0 auto;        /* auto sets equal distance each side of border */
+  border-radius: 25px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  background-color: white;
+  padding: 20px;
+  width: 900px;
+  height: 580px;
+}
+
+/* box border for login page */
+#pageborderLogin{
+    margin:0 auto;        /* auto sets equal distance each side of border */
+    border-radius: 25px;
+    border: 2px solid #04CCAA;
+    padding: 20px;
+    width: 900px;
+    height: 500px;
+}
+
+#pageborder input[type=text]{
+  margin-right: 10px;
+  margin-bottom: 23px;
+
+}
+
+/* CSS around input boxes on login and sign in/sign out buttons */
+#form{
+  margin-top: 40px;
+  font: bold 30px;
+  text-align: center;
+}
+
+/* Heading CSS on login page */
+#heading{
+  font-size: 60px;
+  text-align: center;
+}
+
+/* Predictions page heading */
+#matches{
+  text-align: center;
+  font-size:25px ;
+
+}
+
+
+h1  {
+   font-size: 30px;
+
+   text-align: center;
+}
+
+h2{
+  font-size:20px;
+
+  text-align: center;
+}
+
+h3 {
+  float: left;
+  font-size: 30px;
+
+  text-align: center;
+  margin-top: 13px;
+  margin-left: 13px;
+}
+h4{
+  margin-top: 20px;
+  font-size: 30px;
+
+  text-align: center;
+}
+
+#homepic {
+  margin-top: 10px;
+  background: url("images/premierleagueballs.jpg");
+  width: 850px;
+  height: 400px;
+
+  background-repeat: no-repeat;
+
+
+}
+
+#scorebox{
+  float: left;
+  border-radius: 25px;
+  border: 2px solid #04CCAA;
+  padding: 19px;
+  width: 400px;
+  height: 600px;
+}
+
+#chatbox{
+  float: right;
+    /* auto sets equal distance each side of border */
+  border-radius: 25px;
+  border: 2px solid #04CCAA;
+  padding: 20px;
+  width: 400px;
+  height: 360px;
+}
+
+#tables {
+  margin-left: 30px;
+  width: 80%;
+  font-size: bold 20px;
+  text-align: center;
+
+}
+
+#table {
+  margin-left: 90px;
+  width: 80%;
+  font-size: 20px;
+  margin-bottom:   10px;
+  text-align: center;
+
+}
+
+*{
+  box-sizing: border-box;
+}
+/*tr{
+  font: bold 20px 'Walter Turncoat';
+  font-family: monospace;
+  text-align: center;
+
+}*/
+
+tr:hover{
+  transform: scale(1.2);
+  color: #2E8B57;
+  box-shadow: 10px 12px 5px 0px rgba(0,0,0,0.75);
+}
+
+td{
+  padding: 3.5px;
+}
+#footerdesign {
+  position: relative;
+  bottom: 0;
+  border-radius: 3px;
+  background-color: #04CCAA;
+}
