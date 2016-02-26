@@ -1,19 +1,15 @@
 <?php
  session_start();
+require("PHP/dbConnect.php");
 
 if(!isset($_SESSION['user_id']))
 {
 
-  header('Location: login.php');
+  header('Location: index.html');
 
 }
 else {
-  $myIP = "104.155.86.221";
-  $dsn = "mysql:$myIP;charset=UTF-8";
-  $db_user = "root";
-  $db_password = "root";
-  $database =  "Web";
-  $_DB = new PDO($dsn,$db_user,$db_password);
+
 
   /* Use the Database */
 
