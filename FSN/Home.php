@@ -8,7 +8,7 @@ if(!isset($_SESSION['user_id']))
 
 }
 else {
-  $myIP = "104.155.86.221";
+  $myIP = "130.211.94.47";
   $dsn = "mysql:$myIP;charset=UTF-8";
   $db_user = "root";
   $db_password = "root";

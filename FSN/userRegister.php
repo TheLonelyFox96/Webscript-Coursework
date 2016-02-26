@@ -27,7 +27,7 @@
     $Team = filter_var($_POST['Team'], FILTER_SANITIZE_STRING);
 
 
-    $myIP = "104.155.46.200";
+    $myIP = "130.211.94.47";
     $dsn = "mysql:$myIP;charset=UTF-8";
     $user = "root";
     $password = "root";
