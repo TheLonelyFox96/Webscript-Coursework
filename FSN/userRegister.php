@@ -1,5 +1,6 @@
 <?PHP
   session_start();
+  require("PHP/dbConnect.php");
 
   if(!isset( $_POST['Username'], $_POST['Password'], $_POST['Team']))
   {
@@ -27,12 +28,7 @@
     $Team = filter_var($_POST['Team'], FILTER_SANITIZE_STRING);
 
 
-    $myIP = "130.211.94.47";
-    $dsn = "mysql:$myIP;charset=UTF-8";
-    $user = "root";
-    $password = "root";
-    $database =  "Web";
-    $_DB = new PDO($dsn,$user,$password);
+  
 
     $stmt = $_DB->prepare('Use Web; INSERT INTO User(Username, Password, Team) VALUES(:Username, :Password, :Team)');
 

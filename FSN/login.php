@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+ require("PHP/dbConnect.php");
 
 
 
@@ -29,13 +30,6 @@ session_start();
     $Password = filter_var($_POST['Password'], FILTER_SANITIZE_STRING);
 
 
-
-    $myIP = "130.211.94.47";
-    $dsn = "mysql:$myIP;charset=UTF-8";
-    $db_user = "root";
-    $db_password = "root";
-    $database =  "Web";
-    $_DB = new PDO($dsn,$db_user,$db_password);
 
     /* Use the Database */
 

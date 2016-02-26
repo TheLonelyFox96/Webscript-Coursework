@@ -1,18 +1,17 @@
 <?php
 
-class DB {
+$myIP = "130.211.94.47";
+$dsn = "mysql:$myIP;charset=UTF-8";
+$user = "root";
+$password = "root";
+$database =  "Web";
+$_DB = new PDO($dsn,$user,$password);
 
-    private $host = "104.155.46.200";
-    private $db_user = "root";
-    private $db_password = "root";
-    private $db_name =  "Web";
 
-    $database = new database();
+$showquery = "show databases like 'Web'";
+$showresult = $_DB->prepare($showquery);
+$showresult->execute();
 
-    public function __construct(){
 
-      $dsn = 'mysql:host=' . $this->host . ';db_name' . $this->db_name;
-    }
-}
 
 ?>

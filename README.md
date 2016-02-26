@@ -34,7 +34,7 @@ Take similar steps for db user and password if different to 'root'.
 
 --------------------------------
 
-Creating the Database.
+Creating the Database. - UPDATE NEXT SECTION!
 
 Assuming this is the first time you have used the website then it is likely the database required hasnt been created yet.
 
@@ -51,6 +51,14 @@ Database Plans.
 Have a SINGLE file that connects to the database and is require/used by the other pages to save having to change and enter details on every page.
 
 --------------------------------
+
+DATABASE UPDATE.
+
+To connect to your database all that is now required is to navigate to PHP/dbConnect.php file and edit the credentials to your server IP, user and password.
+
+All files that require this connection have now been setup to just use this file instead of having to change credentials in each individual one.
+
+-------------------------------
 
 To use the API.
 
