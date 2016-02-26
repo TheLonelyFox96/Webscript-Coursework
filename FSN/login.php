@@ -96,7 +96,7 @@ if(empty($user_id))
         <form action="login.php" method="post">
 
           Username:<input type="text" name="Username" value="" maxlength="30"/>
-          Password:<input type="text" name="Password" value="" maxlength="40" /><br>
+          Password:<input type="password" name="Password" value="" maxlength="40" /><br>
         <input type="submit" name="submit" value="Log In">
 
         <p><?php echo $message; ?> </p>

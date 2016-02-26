@@ -28,9 +28,9 @@
     $Team = filter_var($_POST['Team'], FILTER_SANITIZE_STRING);
 
 
-  
 
-    $stmt = $_DB->prepare('Use Web; INSERT INTO User(Username, Password, Team) VALUES(:Username, :Password, :Team)');
+
+    $stmt = $_DB->prepare('INSERT INTO User(Username, Password, Team) VALUES(:Username, :Password, :Team)');
 
     $stmt->bindParam(':Username', $Username);
     $stmt->bindParam(':Password', $Password);
@@ -72,9 +72,9 @@
         <div id="form">
           <form action="userRegister.php" method="post">
 
-            Username:<input type="text" name="Username" value="" maxlength="30"/>
-            Password:<input type="text" name="Password" value="" maxlength="40" />
-            Favourite Team:<input type="text" name="Team" value="" maxlength="30" /><br>
+            Username:<input type="text" name="Username" value="Username" maxlength="30"/>
+            Password:<input type="Password" name="Password" value="Passowrd" maxlength="40" />
+            Favourite Team:<input type="text" name="Team" value="Team" maxlength="30" /><br>
 
             <input type="submit" value="Register!" />
           </form>

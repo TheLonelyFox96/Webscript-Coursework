@@ -13,25 +13,22 @@ else {
 
   /* Use the Database */
 
-  $stmt = $_DB->prepare("USE Web");
-  $stmt->execute();
 
+
+  echo $_SESSION['user_id'];
   /* Run SQL to match user entry to username & password in the Database */
-  $stmt = $_DB->prepare('SELECT Username FROM User WHERE id = :User_id');
+  $stmt = $_DB->prepare('SELECT id, Username FROM User WHERE id = :User_id');
 
-  $stmt->bindParam(':User_id', $SESSION['user_id']);
+  $stmt->bindParam(':User_id', $_SESSION['user_id']);
 
 
   $stmt->execute();
 
-  $user_name = $stmt->fetchColumn();
+  $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-  if(empty($user_name)){
-    $message = 'Error';
-  }
-  else {
-    $message = 'Welcome '.$user_name;
-  }
+
+  $message = $rows[0]["Username"];
+
  }
 
  ?>
