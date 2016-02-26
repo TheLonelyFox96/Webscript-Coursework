@@ -33,8 +33,8 @@ session_start();
 
     /* Use the Database */
 
-    $stmt = $_DB->prepare("USE Web");
-    $stmt->execute();
+    // $stmt = $_DB->prepare("USE Web");
+    // $stmt->execute();
 
     /* Run SQL to match user entry to username & password in the Database */
     $stmt = $_DB->prepare('SELECT id, Username, Password, Team FROM User WHERE Username = :Username AND Password = :Password');
@@ -60,7 +60,7 @@ if(empty($user_id))
 
     else {
       $_SESSION['user_id'] = $user_id;
-      header('Location: Home.php');
+      header('Location: home.php');
 
       $message = 'Successfully Logged In';
 
@@ -96,7 +96,7 @@ if(empty($user_id))
         <form action="login.php" method="post">
 
           Username:<input type="text" name="Username" value="" maxlength="30"/>
-          Password:<input type="text" name="Password" value="" maxlength="40" /><br>
+          Password:<input type="password" name="Password" value="" maxlength="40" /><br>
         <input type="submit" name="submit" value="Log In">
 
         <p><?php echo $message; ?> </p>
