@@ -1,6 +1,6 @@
 <?php
 
-$myIP = "130.211.94.47";
+$myIP = "104.155.3.38";
 $dsn = "mysql:$myIP;charset=UTF-8";
 $user = "root";
 $password = "root";
@@ -25,7 +25,7 @@ else
       $_DB->query("CREATE DATABASE Web");
       $_DB->exec("USE ".$database);
       $_DB->query("CREATE TABLE User(id int PRIMARY KEY AUTO_INCREMENT, Username Varchar(30), Password Varchar(40), Team Varchar(30))");
-      
+
 
       echo "Database Created";
     }
