@@ -1,6 +1,6 @@
 <?php
 
-$myIP = "104.155.3.38";
+$myIP = "104.155.86.130";
 $dsn = "mysql:$myIP;charset=UTF-8";
 $user = "root";
 $password = "root";
@@ -29,6 +29,11 @@ else
 
       echo "Database Created";
     }
+
+    $stmt = $_DB->prepare('SELECT id, Username, Password, Team FROM User WHERE Username = :Username AND Password = :Password');
+
+    $stmt->bindParam(':Username', $Username);
+    $stmt->bindParam(':Password', $Password);
 
 
 ?>

@@ -37,10 +37,10 @@ session_start();
     // $stmt->execute();
 
     /* Run SQL to match user entry to username & password in the Database */
-    $stmt = $_DB->prepare('SELECT id, Username, Password, Team FROM User WHERE Username = :Username AND Password = :Password');
-
-    $stmt->bindParam(':Username', $Username);
-    $stmt->bindParam(':Password', $Password);
+    // $stmt = $_DB->prepare('SELECT id, Username, Password, Team FROM User WHERE Username = :Username AND Password = :Password');
+    //
+    // $stmt->bindParam(':Username', $Username);
+    // $stmt->bindParam(':Password', $Password);
 
     $stmt->execute();
 
