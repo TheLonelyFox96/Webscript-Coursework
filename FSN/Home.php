@@ -17,7 +17,7 @@ else {
 
   echo $_SESSION['user_id'];
   /* Run SQL to match user entry to username & password in the Database */
-  $stmt = $_DB->prepare('SELECT id, Username FROM User WHERE id = :User_id');
+  $stmt = $_DB->prepare('SELECT id, Name, Username FROM User WHERE id = :User_id');
 
   $stmt->bindParam(':User_id', $_SESSION['user_id']);
 
@@ -27,7 +27,7 @@ else {
   $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
-  $message = $rows[0]["Username"];
+  $message = $rows[0]["Name"];
 
  }
 

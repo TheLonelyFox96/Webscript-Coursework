@@ -97,7 +97,7 @@
 
         success = function(){
           var fixtures = JSON.parse(xhr.responseText);
-          target.innerHTML = "";
+
           if(fixtures != false) {
             for (var fix in fixtures) {
               target.innerHTML += "<tr>\
@@ -129,7 +129,7 @@
 
           success = function(){
             var scores = JSON.parse(xhr.responseText);
-            target.innerHTML = "";
+            // target.innerHTML = "";
             if(scores != false){
               for (var Lscore in scores) {
                 target.innerHTML += "<tr>\
@@ -142,8 +142,9 @@
                 </tr>";
               }
             } else {
-              target.innerHTML = "No Scores available... getting fixtures...";
               getFixtures();
+              // target.innerHTML = "No Scores available... getting fixtures...";
+
             }
               console.log(JSON.parse(xhr.responseText));
           }
