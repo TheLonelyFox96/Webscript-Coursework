@@ -1,17 +1,17 @@
 <?php
 
-$apiKey = "2c2ef457-ead1-b1fb-5c6aabb5d0a6";
+$apiKey = "565ec012251f932ea40000014fd32b7baa6846775e5afcc76252a46f";
 
-$json = file_get_contents("http://football-api.com/api/?Action=standings&APIKey=".$apiKey."&comp_id=1204");
+$json = file_get_contents("http://api.football-api.com/2.0/standings/1204?Authorization=565eaa22251f932b9f000001d50aaf0b55c7477c5ffcdbaf113ebbda");
 
 $standings = json_decode($json, true);
 
 $table = array();
 
-foreach($standings['teams'] as $team) {
-  array_push($table, array($team["stand_position"], $team['stand_team_name'],
-  $team["stand_overall_w"], $team["stand_overall_d"], $team["stand_overall_l"],
-  $team["stand_points"]));
+foreach($standings as $team) {
+  array_push($table, array($team["position"], $team['team_name'],
+  $team["overall_w"], $team["overall_d"], $team["overall_l"],
+  $team["points"]));
 
 }
 

@@ -21,7 +21,7 @@
       <a href="livescores.php" class="button"> Live Scores/Chat </a>
       <a href="table.php" class="button"> Table </a>
       <a href="predictions.php" class="button"> Score Predictions </a>
-      <a href=news.html class="button"> News </a>
+      <a href=teamStats.php class="menu"> Stats </a>
       <a href=myAccount.html class="button"> My Account </a>
   </div>
       <div class="dropMenu">
@@ -32,7 +32,7 @@
             <li><a href="livescores.php" class="menu"> Live Scores/Chat </a></li>
             <li><a href="table.php" class="menu"> Table </a></li>
             <li><a href="predictions.php" class="menu"> Score Predictions </a></li>
-            <li><a href=news.html class="menu"> News </a></li>
+            <li><a href=teamStats.php class="menu"> Stats </a></li>
             <li><a href=myAccount.html class="menu"> My Account </a></li>
           </ul>
         </div>
@@ -50,7 +50,7 @@
       <table id="tables">
       <?php
       if(!empty($scores)) {
-        foreach($scores as $Lscore) {
+        foreach($LiveScores as $Lscore) {
           echo "<tr>
           <td>".$Lscore[0]."</td>
           <td>".$Lscore[1]."</td>
@@ -129,9 +129,9 @@
 
           success = function(){
             var scores = JSON.parse(xhr.responseText);
-            // target.innerHTML = "";
+            //target.innerHTML = "";
             if(scores != false){
-              for (var Lscore in scores) {
+              for (var Lscore in LiveScores) {
                 target.innerHTML += "<tr>\
                   <td>"+Lscore[0]+"</td>\
                   <td>"+Lscore[1]+"</td>\

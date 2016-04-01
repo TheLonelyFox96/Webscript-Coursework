@@ -58,7 +58,7 @@ else {
             <a href="livescores.php" class="button"> Live Scores/Chat </a>
             <a href="table.php" class="button"> Table </a>
             <a href="predictions.php" class="button"> Score Predictions </a>
-            <a href=news.html class="button"> News </a>
+            <a href=teamStats.php class="menu"> Stats </a>
             <a href=myAccount.html class="button"> My Account </a>
         </div>
             <div class="dropMenu">
@@ -69,7 +69,7 @@ else {
                   <li><a href="livescores.php" class="menu"> Live Scores/Chat </a></li>
                   <li><a href="table.php" class="menu"> Table </a></li>
                   <li><a href="predictions.php" class="menu"> Score Predictions </a></li>
-                  <li><a href=news.html class="menu"> News </a></li>
+                  <li><a href=teamStats.php class="menu"> Stats </a></li>
                   <li><a href=myAccount.html class="menu"> My Account </a></li>
                 </ul>
               </div>
@@ -84,7 +84,7 @@ else {
 
     <div id="pageborder">
 
-      <h2> Welcome to Live4Scores, the social side of Football. </h2>
+      <h2> Welcome to FSN, the social side of Football. </h2>
 
       <h4> Welcome Back <?php echo $message; ?></h4>
 

@@ -76,11 +76,11 @@
         <div id="form">
           <form action="userRegister.php" method="post">
 
-            Name:<input type="text" name="Name" value="Name" maxlength="40"/>
-            Email:<input type="text" name="Email" value="Email" maxlength="50"/>
-            Username:<input type="text" name="Username" value="Username" maxlength="30"/><br>
-            Password:<input type="Password" name="Password" value="Passowrd" maxlength="40" />
-            Favourite Team:<input type="text" name="Team" value="Team" maxlength="30" /><br>
+            Name:<input type="text" name="Name" placeholder="Name"  maxlength="40"/>
+            Email:<input type="text" name="Email" placeholder="Email" maxlength="50"/>
+            Username:<input type="text" name="Username" placeholder="Username" maxlength="30"/><br>
+            Password:<input type="Password" name="Password" placeholder="Passowrd" maxlength="40" />
+            Favourite Team:<input type="text" name="Team" placeholder="Team" maxlength="30" /><br>
 
             <input type="submit" value="Register!" />
           </form>

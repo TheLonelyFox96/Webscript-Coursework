@@ -73,7 +73,7 @@ nav {
 }
 
 /* input boxes on login */
-input[type="text"],
+input[id="login"],
 input[type="password"]{         /* design by http://callmenick.com/post/
                                     various-css-input-text-styles */
   padding: 10px;
@@ -82,8 +82,8 @@ input[type="password"]{         /* design by http://callmenick.com/post/
   transition: border 0.3s;
   margin-top: 15px;
 }
-input[type="text"]:focus,
-input[type="text"].focus,
+input[id="login"]:focus,
+input[id="login"].focus,
 input[type="password"]:focus,
 input[type="password"].focus {
   border-bottom: solid 2px #04CCAA;
@@ -105,6 +105,24 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #04CCAA; /* Green */
     color: white;
+}
+
+
+/* Search bar */
+
+input[id="search"]{
+
+  flex: 1;
+	padding-left: 3ex;
+	outline: none;
+	background: #FFF;
+	border-radius: 0.5ex;
+	margin: 0.5ex;
+	padding: 2.5ex;
+	border: #DDD solid thin;
+    flex-basis: 50%;
+  width: 400px;
+  font-size: 20px;
 }
 
 p {
@@ -159,6 +177,61 @@ p {
   margin-top: 40px;
   font: bold 30px;
   text-align: center;
+}
+
+
+#pageBordStats{
+    margin:0 auto;        /* auto sets equal distance each side of border */
+    border-radius: 25px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    background-color: white;
+    padding: 20px;
+    width: 900px;
+    height: 1150px;
+}
+#teamInfo{
+    margin:0 auto;
+    border-radius: 25px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    background-color: white;
+    padding: 20px;
+    width: 700px;
+    height: 230px;
+    margin-bottom: 30px;
+}
+
+#Squad{
+  float: left;
+  border-radius: 25px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  background-color: white;
+  padding: 19px;
+  padding-left: 0px;
+  width: 400px;
+  height: 400px;
+}
+
+#Transfers{
+  float: right;
+  border-radius: 25px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  background-color: white;
+  padding: 19px;
+  padding-left: 0px;
+  width: 400px;
+  height: 400px;
+  margin-bottom: 30px;
+}
+
+#Injuries{
+  margin:0 auto;
+  margin-top: 450px;
+  border-radius: 25px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  background-color: white;
+  padding: 20px;
+  width: 600px;
+  height: 230px;
 }
 
 /* Heading CSS on login page */
@@ -218,6 +291,7 @@ h4{
   border-radius: 25px;
   border: 2px solid #04CCAA;
   padding: 19px;
+  padding-left: 0px;
   width: 400px;
   height: 600px;
 }
