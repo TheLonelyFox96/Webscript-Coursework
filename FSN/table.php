@@ -1,4 +1,4 @@
-<?php require("PHP/leaguetable.php"); ?>
+<?php require("api/1/leaguetable.php"); ?>
 <!DOCTYPE html>
 <html>
   <head>

@@ -49,8 +49,9 @@
     <div id="scorebox">
 
       <table id="tables">
-      <?php
-      // if(!empty($scores)) {
+
+
+       <!-- // if(!empty($scores)) {
       //   foreach($LiveScores as $Lscore) {
       //     echo "<tr>
       //     <td>".$Lscore[0]."</td>
@@ -63,99 +64,100 @@
       //   }
       // }
       // else {
-      //   foreach($fix as $fixture) {
-      //     echo "<tr>
-      //     <td>".$fixture[0]."</td>
-      //     <td>".$fixture[1]."</td>
-      //     <td>v</td>
-      //     <td>".$fixture[2]."</td>
-      //     </tr>";
-      //   }
-      //
-      // }
+      //   foreach($fix as $fixture) { -->
+        <!-- <tr>
+          <td>".$fixture[0]."</td>
+          <td>".$fixture[1]."</td>
+          <td>v</td>
+          <td>".$fixture[2]."</td>
+        </tr>"; -->
 
-      ?>
-
-    <script>
-    function getFixtures() {
-
-      var target, xhr, success;
-
-      target = document.getElementById("tables");
-
-      xhr = new XMLHttpRequest();
-
-      success = function(){
-        var fixtures = JSON.parse(xhr.responseText);
-
-        if(fixtures != false){
-          for (var fixture in fixtures) {
-            target.innerHTML += "<tr>\
-              <td>"+fixture[0]+"</td>\
-              <td>"+fixture[1]+"</td>\
-              <td>v</td>\
-              <td>"+fixture[2]+"</td>\
-            </tr>";
-          }
-        }
-
-        console.log(JSON.parse(xhr.responseText));
-
-      }
-
-
-      xhr.open("GET", "PHP/refreshFixtures.php", true);
-      xhr.addEventListener("load", success);
-      xhr.send();
-
-  }
-
-    function getScores() {
-      setInterval(function() {
-        var target, xhr, success;
-
-        target = document.getElementById("tables");
-
-        xhr = new XMLHttpRequest();
-
-        success = function(){
-          var scores = JSON.parse(xhr.responseText);
-          //target.innerHTML = "";
-          if(scores != false){
-            for (var Lscore in LiveScores) {
-              target.innerHTML += "<tr>\
-                <td>"+Lscore[0]+"</td>\
-                <td>"+Lscore[1]+"</td>\
-                <td>"+Lscore[2]+"</td>\
-                <td>"+Lscore[3]+"</td>\
-                <td>"+Lscore[4]+"</td>\
-                <td>"+Lscore[5]+"</td>\
-              </tr>";
-            }
-          } else {
-            getFixtures();
-            //target.innerHTML = "No Scores available... getting fixtures...";
-
-          }
-            console.log(JSON.parse(xhr.responseText));
-        }
-
-        xhr.open("GET", "PHP/refreshTable.php", true);
-        xhr.addEventListener("load", success);
-        xhr.send();
-      }, 5000);
-    }
-
-    window.addEventListener("load", getFixtures());
-</script>
-</table>
+      </table>
     </div>
+
+
+
     <div id="chatbox">
       <p> people can chat in here </p>
 
     </div>
 
   </div>
+  <script>
+  function getFixtures() {
+
+    var target, xhr, success;
+
+    target = document.getElementById("scorebox");
+
+    xhr = new XMLHttpRequest();
+
+    success = function(){
+      var returnFix = JSON.parse(xhr.responseText);
+      var fixtures;
+      if(returnFix != false){
+        for (var fixture in fixtures) {
+          target.innerHTML = "<tr>\
+            <td>"+fixture[0]+"</td>\
+            <td>"+fixture[1]+"</td>\
+            <td>v</td>\
+            <td>"+fixture[2]+"</td>\
+          </tr>";
+        }
+      }
+
+      console.log(JSON.parse(xhr.responseText));
+
+    }
+
+
+    xhr.open("GET", "api/1/refreshFixtures.php", true);
+    xhr.addEventListener("load", success);
+    xhr.send();
+
+}
+
+  function getScores() {
+    setInterval(function() {
+      var target, xhr, success;
+
+      target = document.getElementById("scorebox");
+
+      xhr = new XMLHttpRequest();
+
+      success = function(){
+        //target.innerHTML = "";
+        var scores = JSON.parse(xhr.responseText);
+        var LiveScores;
+
+        if(scores != false){
+          for (var Lscore in LiveScores) {
+              target.innerHTML += "<tr>\
+              <td>"+Lscore[0]+"</td>\
+              <td>"+Lscore[1]+"</td>\
+              <td>"+Lscore[2]+"</td>\
+              <td>"+Lscore[3]+"</td>\
+              <td>"+Lscore[4]+"</td>\
+              <td>"+Lscore[5]+"</td>\
+            </tr>";
+          }
+        } else {
+          getFixtures();
+          //target.innerHTML = "No Scores available... getting fixtures...";
+
+        }
+          console.log(JSON.parse(xhr.responseText));
+
+      }
+
+      xhr.open("GET", "api/1/refreshTable.php", true);
+      xhr.addEventListener("load", success);
+      xhr.send();
+    }, 15000);
+  }
+
+  window.addEventListener("load", getScores());
+</script>
       <footer id="footerdesign">
         <p>Owner: UP737725</p>
         <p>WebScript Programming Coursework 2015-16</p>
