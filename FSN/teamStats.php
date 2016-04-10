@@ -1,4 +1,4 @@
-<?php  ?>
+<?php //require("PHP/teams/crystalPalace.php"); ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -52,6 +52,17 @@
 
     <div id="teamInfo">
       <p> Team Information </p>
+      <?php
+        //echo "<tr>
+        //<td>".$CP[0]."</td>
+      //  <td>".$CP[1]."</td>
+        //<td>".$CP[2]."</td>
+      //  <td>".$CP[3]."</td>
+      //  <td>".$CP[4]."</td>
+      //  <td>".$CP[5]."</td>
+      //  </tr>";
+
+      //?>
     </div>
 
     <div id="Squad">
