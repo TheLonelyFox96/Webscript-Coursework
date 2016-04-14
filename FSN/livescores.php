@@ -17,27 +17,27 @@
     <nav>
 
       <h3> FSN </h3>
-  <div id="navigation">
-      <a href="home.php" class="button">Home/Login</a>
-      <a href="livescores.php" class="button"> Live Scores/Chat </a>
-      <a href="table.php" class="button"> Table </a>
-      <a href="predictions.php" class="button"> Score Predictions </a>
-      <a href=teamStats.php class="menu"> Stats </a>
-      <a href=myAccount.html class="button"> My Account </a>
-  </div>
-      <div class="dropMenu">
-        <button class="dropdwnButton"> Menu </button>
-        <div class="menu-dropdown">
-          <ul>
-            <li><a href="home.php" class="menu">Home/Login</a></li>
-            <li><a href="livescores.php" class="menu"> Live Scores/Chat </a></li>
-            <li><a href="table.php" class="menu"> Table </a></li>
-            <li><a href="predictions.php" class="menu"> Score Predictions </a></li>
-            <li><a href=teamStats.php class="menu"> Stats </a></li>
-            <li><a href=myAccount.html class="menu"> My Account </a></li>
-          </ul>
-        </div>
+      <div id="navigation">
+          <a href="home.php" class="button">Home/Login</a>
+          <a href="livescores.php" class="button"> Live Scores/Chat </a>
+          <a href="table.php" class="button"> Table </a>
+          <a href="predictions.php" class="button"> Score Predictions </a>
+          <a href=teamStats.php class="button"> Stats </a>
+          <a href=myAccount.php class="button"> My Account </a>
       </div>
+          <div class="dropMenu">
+            <button class="dropdwnButton"> Menu </button>
+            <div class="menu-dropdown">
+              <ul>
+                <li><a href="home.php" class="menu">Home/Login</a></li>
+                <li><a href="livescores.php" class="menu"> Live Scores/Chat </a></li>
+                <li><a href="table.php" class="menu"> Table </a></li>
+                <li><a href="predictions.php" class="menu"> Score Predictions </a></li>
+                <li><a href=teamStats.php class="menu"> Stats </a></li>
+                <li><a href=myAccount.php class="menu"> My Account </a></li>
+              </ul>
+            </div>
+          </div>
 
     </nav>
 
@@ -79,7 +79,8 @@
 
     <div id="chatbox">
       <p> people can chat in here </p>
-
+      <input type="text" id="Chat" name="Chat" placeholder="Chat Here"  maxlength="150"/>
+      <input id="ChatButton" type="submit" value="Chat" />
     </div>
 
   </div>
@@ -88,7 +89,7 @@
 
     var target, xhr, success;
 
-    target = document.getElementById("scorebox");
+    target = document.getElementById("tables");
 
     xhr = new XMLHttpRequest();
 
@@ -121,7 +122,7 @@
     setInterval(function() {
       var target, xhr, success;
 
-      target = document.getElementById("scorebox");
+      target = document.getElementById("tables");
 
       xhr = new XMLHttpRequest();
 
@@ -153,7 +154,7 @@
       xhr.open("GET", "api/1/refreshTable.php", true);
       xhr.addEventListener("load", success);
       xhr.send();
-    }, 15000);
+    }, 30000);
   }
 
   window.addEventListener("load", getScores());

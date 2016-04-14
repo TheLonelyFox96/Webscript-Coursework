@@ -1,4 +1,4 @@
-<?php //require("PHP/teams/crystalPalace.php"); ?>
+<?php ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -14,16 +14,16 @@
   <body>
 
     <header>
-    <nav>
+      <nav>
 
-            <h3> FSN </h3>
+        <h3> FSN </h3>
         <div id="navigation">
             <a href="home.php" class="button">Home/Login</a>
             <a href="livescores.php" class="button"> Live Scores/Chat </a>
             <a href="table.php" class="button"> Table </a>
             <a href="predictions.php" class="button"> Score Predictions </a>
-            <a href=news.html class="button"> News </a>
-            <a href=myAccount.html class="button"> My Account </a>
+            <a href=teamStats.php class="button"> Stats </a>
+            <a href=myAccount.php class="button"> My Account </a>
         </div>
             <div class="dropMenu">
               <button class="dropdwnButton"> Menu </button>
@@ -33,13 +33,13 @@
                   <li><a href="livescores.php" class="menu"> Live Scores/Chat </a></li>
                   <li><a href="table.php" class="menu"> Table </a></li>
                   <li><a href="predictions.php" class="menu"> Score Predictions </a></li>
-                  <li><a href=news.html class="menu"> News </a></li>
-                  <li><a href=myAccount.html class="menu"> My Account </a></li>
+                  <li><a href=teamStats.php class="menu"> Stats </a></li>
+                  <li><a href=myAccount.php class="menu"> My Account </a></li>
                 </ul>
               </div>
             </div>
 
-    </nav>
+      </nav>
   </header>
 
     <div id="content">
@@ -52,17 +52,6 @@
 
     <div id="teamInfo">
       <p> Team Information </p>
-      <?php
-        //echo "<tr>
-        //<td>".$CP[0]."</td>
-      //  <td>".$CP[1]."</td>
-        //<td>".$CP[2]."</td>
-      //  <td>".$CP[3]."</td>
-      //  <td>".$CP[4]."</td>
-      //  <td>".$CP[5]."</td>
-      //  </tr>";
-
-      //?>
     </div>
 
     <div id="Squad">

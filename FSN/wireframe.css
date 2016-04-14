@@ -131,6 +131,33 @@ p {
   margin-top: 20px;
 }
 
+h1  {
+   font-size: 30px;
+
+   text-align: center;
+}
+
+h2{
+  font-size:20px;
+
+  text-align: center;
+}
+
+h3 {
+  float: left;
+  font-size: 30px;
+
+  text-align: center;
+  margin-top: 13px;
+  margin-left: 13px;
+}
+h4{
+  margin-top: 20px;
+  font-size: 30px;
+
+  text-align: center;
+}
+
 
 
 
@@ -140,14 +167,15 @@ p {
     border-radius: 25px;
     border: 2px solid rgba(0, 0, 0, 0.5);
     background-color: white;
-    padding: 20px;
+    padding: 15px;
     width: 900px;
-    height: 630px;
+    height: 730px;
+    margin-bottom: 0;
 }
 
 /* sets box border around content on League table page */
 #tablePageBorder{
-  margin:0 auto;        /* auto sets equal distance each side of border */
+  margin:0 auto;
   border-radius: 25px;
   border: 2px solid rgba(0, 0, 0, 0.5);
   background-color: white;
@@ -158,12 +186,34 @@ p {
 
 /* box border for login page */
 #pageborderLogin{
-    margin:0 auto;        /* auto sets equal distance each side of border */
+    margin:0 auto;
     border-radius: 25px;
     border: 2px solid #04CCAA;
     padding: 20px;
     width: 900px;
     height: 500px;
+}
+
+#pageBordStats{
+    margin:0 auto;
+    border-radius: 25px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    background-color: white;
+    padding: 20px;
+    width: 900px;
+    height: 1150px;
+}
+
+/* Page Border for account page */
+#pageborderAccount{
+    margin:0 auto;
+    border-radius: 25px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    background-color: white;
+    padding: 15px;
+    width: 900px;
+    height: 430px;
+    margin-bottom: 0;
 }
 
 #pageborder input[type=text]{
@@ -180,15 +230,6 @@ p {
 }
 
 
-#pageBordStats{
-    margin:0 auto;        /* auto sets equal distance each side of border */
-    border-radius: 25px;
-    border: 2px solid rgba(0, 0, 0, 0.5);
-    background-color: white;
-    padding: 20px;
-    width: 900px;
-    height: 1150px;
-}
 #teamInfo{
     margin:0 auto;
     border-radius: 25px;
@@ -247,34 +288,7 @@ p {
 
 }
 
-
-h1  {
-   font-size: 30px;
-
-   text-align: center;
-}
-
-h2{
-  font-size:20px;
-
-  text-align: center;
-}
-
-h3 {
-  float: left;
-  font-size: 30px;
-
-  text-align: center;
-  margin-top: 13px;
-  margin-left: 13px;
-}
-h4{
-  margin-top: 20px;
-  font-size: 30px;
-
-  text-align: center;
-}
-
+/* Home page */
 #homepic {
   margin-top: 10px;
   background: url("images/premierleagueballs.jpg");
@@ -283,8 +297,17 @@ h4{
 
   background-repeat: no-repeat;
 
+}
+
+#homeInfo {
+  margin-top: 0px;
+  border-radius: 25px;
+  border: 1px solid black;
+  padding-bottom: 10px;
 
 }
+
+/* Live Scores and Chat Page */
 
 #scorebox{
   float: left;
@@ -306,6 +329,29 @@ h4{
   height: 360px;
 }
 
+#Chat {
+  margin-top: 235px;
+  width: 280px;
+  height: 50px;
+}
+
+#ChatButton {
+  margin-top: 20px;
+  width:60px;
+  height: 50px;
+  background-color: white;
+  color: black;
+  border: 2px solid #04CCAA;
+}
+
+#ChatButton:Hover {
+  background-color: #04CCAA; /* Green */
+  color: white;
+}
+
+
+/* League Table Page */
+
 #tables {
   margin-left: 30px;
   width: 80%;
@@ -326,22 +372,33 @@ h4{
 *{
   box-sizing: border-box;
 }
-/*tr{
-  font: bold 20px 'Walter Turncoat';
-  font-family: monospace;
-  text-align: center;
-
-}*/
 
 tr:hover{
   transform: scale(1.2);
-  color: #2E8B57;
+  color: #04CCAA;
   box-shadow: 10px 12px 5px 0px rgba(0,0,0,0.75);
 }
 
 td{
   padding: 3.5px;
 }
+
+/* Account page CSS */
+
+#edit {
+  margin-left: 400px;
+  margin-top: 20px;
+  background-color: white;
+    color: black;
+    border: 2px solid #04CCAA;
+}
+
+#edit:hover {
+    background-color: #04CCAA; /* Green */
+    color: white;
+}
+
+
 #footerdesign {
   position: relative;
   bottom: 0;
