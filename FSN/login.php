@@ -102,7 +102,9 @@ if(empty($user_id))
         <p><?php echo $message; ?> </p>
 
       </form>
-
+      <form action="index.html" method="post">
+        <input type="submit" name="submit" value="Back"><br>
+      </form>
 
         </div>
     </div>
