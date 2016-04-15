@@ -2,17 +2,17 @@
   session_start();
   require("PHP/dbConnect.php");
 
-  if(!isset( $_POST['Username'], $_POST['Password'], $_POST['Team']))
+  if(!isset($_POST['Name'], $_POST['Email'], $_POST['Username'], $_POST['Password'], $_POST['Team']))
   {
 
       $message = 'Please enter your details';
 
     }
 
-  elseif (strlen($_POST['Username']) > 30 || strlen($_POST['Username']) < 1)
+  elseif (strlen($_POST['Username']) > 30 || strlen($_POST['Username']) <= 4)
   {
 
-    $message = 'Username is too long';
+    $message = 'Usernames must be between 4-30 characters long';
   }
 
   elseif (strlen($_POST['Password']) > 40 || strlen($_POST['Password']) < 8)
@@ -23,6 +23,8 @@
   else
   {
     /*Cleans any inputs - guards agains attacks via SQL Injection */
+    $Name = filter_var($_POST['Name'], FILTER_SANITIZE_STRING);
+    $Email = filter_var($_POST['Email'], FILTER_SANITIZE_STRING);
     $Username = filter_var($_POST['Username'], FILTER_SANITIZE_STRING);
     $Password = filter_var($_POST['Password'], FILTER_SANITIZE_STRING);
     $Team = filter_var($_POST['Team'], FILTER_SANITIZE_STRING);
@@ -30,8 +32,10 @@
 
 
 
-    $stmt = $_DB->prepare('INSERT INTO User(Username, Password, Team) VALUES(:Username, :Password, :Team)');
+    $stmt = $_DB->prepare('INSERT INTO User(Name, Email, Username, Password, Team) VALUES(:Name, :Email, :Username, :Password, :Team)');
 
+    $stmt->bindParam(':Name', $Name);
+    $stmt->bindParam(':Email', $Email);
     $stmt->bindParam(':Username', $Username);
     $stmt->bindParam(':Password', $Password);
     $stmt->bindParam(':Team', $Team);
@@ -72,9 +76,11 @@
         <div id="form">
           <form action="userRegister.php" method="post">
 
-            Username:<input type="text" name="Username" value="Username" maxlength="30"/>
-            Password:<input type="Password" name="Password" value="Passowrd" maxlength="40" />
-            Favourite Team:<input type="text" name="Team" value="Team" maxlength="30" /><br>
+            Name:<input type="text" id="login" name="Name" placeholder="Name"  maxlength="40"/>
+            Email:<input type="text" id="login" name="Email" placeholder="Email" maxlength="50"/>
+            Username:<input type="text" id="login" name="Username" placeholder="Username" maxlength="30"/><br>
+            Password:<input type="Password" name="Password" placeholder="Passowrd" maxlength="40" />
+            Favourite Team:<input type="text" id="login" name="Team" placeholder="Team" maxlength="30" /><br>
 
             <input type="submit" value="Register!" />
           </form>

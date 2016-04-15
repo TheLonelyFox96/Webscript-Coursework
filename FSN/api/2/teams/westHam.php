@@ -1,12 +1,11 @@
+
+
 <?php
 
 $apiKey = "565ec012251f932ea40000014fd32b7baa6846775e5afcc76252a46f";
 
-$today = date("d-m-Y");
 
-$newDate = date('d-m-Y', strtotime("+5 days"));
-
-$json = file_get_contents("http://api.football-api.com/2.0/matches?comp_id=1204&from_date=".$today."&to_date=".$newDate."&Authorization=565eaa22251f932b9f000001d50aaf0b55c7477c5ffcdbaf113ebbda");
+$json = file_get_contents("http://api.football-api.com/2.0/matches?comp_id=1204%2C1198&team_id=9427&from_date=13.04.2016&to_date=16.05.2016&Authorization=565eaa22251f932b9f000001d50aaf0b55c7477c5ffcdbaf113ebbda");
 
 
 

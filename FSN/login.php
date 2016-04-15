@@ -37,10 +37,10 @@ session_start();
     // $stmt->execute();
 
     /* Run SQL to match user entry to username & password in the Database */
-    $stmt = $_DB->prepare('SELECT id, Username, Password, Team FROM User WHERE Username = :Username AND Password = :Password');
-
-    $stmt->bindParam(':Username', $Username);
-    $stmt->bindParam(':Password', $Password);
+    // $stmt = $_DB->prepare('SELECT id, Username, Password, Team FROM User WHERE Username = :Username AND Password = :Password');
+    //
+    // $stmt->bindParam(':Username', $Username);
+    // $stmt->bindParam(':Password', $Password);
 
     $stmt->execute();
 
@@ -95,7 +95,7 @@ if(empty($user_id))
       <div id="form">
         <form action="login.php" method="post">
 
-          Username:<input type="text" name="Username" value="" maxlength="30"/>
+          Username:<input id="login" type="text" name="Username" value="" maxlength="30"/>
           Password:<input type="password" name="Password" value="" maxlength="40" /><br>
         <input type="submit" name="submit" value="Log In">
 

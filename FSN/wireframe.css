@@ -73,7 +73,7 @@ nav {
 }
 
 /* input boxes on login */
-input[type="text"],
+input[id="login"],
 input[type="password"]{         /* design by http://callmenick.com/post/
                                     various-css-input-text-styles */
   padding: 10px;
@@ -82,8 +82,8 @@ input[type="password"]{         /* design by http://callmenick.com/post/
   transition: border 0.3s;
   margin-top: 15px;
 }
-input[type="text"]:focus,
-input[type="text"].focus,
+input[id="login"]:focus,
+input[id="login"].focus,
 input[type="password"]:focus,
 input[type="password"].focus {
   border-bottom: solid 2px #04CCAA;
@@ -107,73 +107,29 @@ input[type="submit"]:hover {
     color: white;
 }
 
+
+/* Search bar */
+
+input[id="search"]{
+
+  flex: 1;
+	padding-left: 3ex;
+	outline: none;
+	background: #FFF;
+	border-radius: 0.5ex;
+	margin: 0.5ex;
+	padding: 2.5ex;
+	border: #DDD solid thin;
+    flex-basis: 50%;
+  width: 400px;
+  font-size: 20px;
+}
+
 p {
   font: bold 15px;
   text-align: center;
   margin-top: 20px;
 }
-
-
-
-
-/* box border of content on pages */
-#pageborder{
-    margin:0 auto;        /* auto sets equal distance each side of border */
-    border-radius: 25px;
-    border: 2px solid rgba(0, 0, 0, 0.5);
-    background-color: white;
-    padding: 20px;
-    width: 900px;
-    height: 630px;
-}
-
-/* sets box border around content on League table page */
-#tablePageBorder{
-  margin:0 auto;        /* auto sets equal distance each side of border */
-  border-radius: 25px;
-  border: 2px solid rgba(0, 0, 0, 0.5);
-  background-color: white;
-  padding: 20px;
-  width: 900px;
-  height: 580px;
-}
-
-/* box border for login page */
-#pageborderLogin{
-    margin:0 auto;        /* auto sets equal distance each side of border */
-    border-radius: 25px;
-    border: 2px solid #04CCAA;
-    padding: 20px;
-    width: 900px;
-    height: 500px;
-}
-
-#pageborder input[type=text]{
-  margin-right: 10px;
-  margin-bottom: 23px;
-
-}
-
-/* CSS around input boxes on login and sign in/sign out buttons */
-#form{
-  margin-top: 40px;
-  font: bold 30px;
-  text-align: center;
-}
-
-/* Heading CSS on login page */
-#heading{
-  font-size: 60px;
-  text-align: center;
-}
-
-/* Predictions page heading */
-#matches{
-  text-align: center;
-  font-size:25px ;
-
-}
-
 
 h1  {
    font-size: 30px;
@@ -202,6 +158,137 @@ h4{
   text-align: center;
 }
 
+
+
+
+/* box border of content on pages */
+#pageborder{
+    margin:0 auto;        /* auto sets equal distance each side of border */
+    border-radius: 25px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    background-color: white;
+    padding: 15px;
+    width: 900px;
+    height: 730px;
+    margin-bottom: 0;
+}
+
+/* sets box border around content on League table page */
+#tablePageBorder{
+  margin:0 auto;
+  border-radius: 25px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  background-color: white;
+  padding: 20px;
+  width: 900px;
+  height: 580px;
+}
+
+/* box border for login page */
+#pageborderLogin{
+    margin:0 auto;
+    border-radius: 25px;
+    border: 2px solid #04CCAA;
+    padding: 20px;
+    width: 900px;
+    height: 500px;
+}
+
+#pageBordStats{
+    margin:0 auto;
+    border-radius: 25px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    background-color: white;
+    padding: 20px;
+    width: 900px;
+    height: 1150px;
+}
+
+/* Page Border for account page */
+#pageborderAccount{
+    margin:0 auto;
+    border-radius: 25px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    background-color: white;
+    padding: 15px;
+    width: 900px;
+    height: 430px;
+    margin-bottom: 0;
+}
+
+#pageborder input[type=text]{
+  margin-right: 10px;
+  margin-bottom: 23px;
+
+}
+
+/* CSS around input boxes on login and sign in/sign out buttons */
+#form{
+  margin-top: 40px;
+  font: bold 30px;
+  text-align: center;
+}
+
+
+#teamInfo{
+    margin:0 auto;
+    border-radius: 25px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    background-color: white;
+    padding: 20px;
+    width: 700px;
+    height: 230px;
+    margin-bottom: 30px;
+}
+
+#Squad{
+  float: left;
+  border-radius: 25px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  background-color: white;
+  padding: 19px;
+  padding-left: 0px;
+  width: 400px;
+  height: 400px;
+}
+
+#Transfers{
+  float: right;
+  border-radius: 25px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  background-color: white;
+  padding: 19px;
+  padding-left: 0px;
+  width: 400px;
+  height: 400px;
+  margin-bottom: 30px;
+}
+
+#Injuries{
+  margin:0 auto;
+  margin-top: 450px;
+  border-radius: 25px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  background-color: white;
+  padding: 20px;
+  width: 600px;
+  height: 230px;
+}
+
+/* Heading CSS on login page */
+#heading{
+  font-size: 60px;
+  text-align: center;
+}
+
+/* Predictions page heading */
+#matches{
+  text-align: center;
+  font-size:25px ;
+
+}
+
+/* Home page */
 #homepic {
   margin-top: 10px;
   background: url("images/premierleagueballs.jpg");
@@ -210,14 +297,24 @@ h4{
 
   background-repeat: no-repeat;
 
+}
+
+#homeInfo {
+  margin-top: 0px;
+  border-radius: 25px;
+  border: 1px solid black;
+  padding-bottom: 10px;
 
 }
+
+/* Live Scores and Chat Page */
 
 #scorebox{
   float: left;
   border-radius: 25px;
   border: 2px solid #04CCAA;
   padding: 19px;
+  padding-left: 0px;
   width: 400px;
   height: 600px;
 }
@@ -231,6 +328,29 @@ h4{
   width: 400px;
   height: 360px;
 }
+
+#Chat {
+  margin-top: 235px;
+  width: 280px;
+  height: 50px;
+}
+
+#ChatButton {
+  margin-top: 20px;
+  width:60px;
+  height: 50px;
+  background-color: white;
+  color: black;
+  border: 2px solid #04CCAA;
+}
+
+#ChatButton:Hover {
+  background-color: #04CCAA; /* Green */
+  color: white;
+}
+
+
+/* League Table Page */
 
 #tables {
   margin-left: 30px;
@@ -252,22 +372,33 @@ h4{
 *{
   box-sizing: border-box;
 }
-/*tr{
-  font: bold 20px 'Walter Turncoat';
-  font-family: monospace;
-  text-align: center;
-
-}*/
 
 tr:hover{
   transform: scale(1.2);
-  color: #2E8B57;
+  color: #04CCAA;
   box-shadow: 10px 12px 5px 0px rgba(0,0,0,0.75);
 }
 
 td{
   padding: 3.5px;
 }
+
+/* Account page CSS */
+
+#edit {
+  margin-left: 400px;
+  margin-top: 20px;
+  background-color: white;
+    color: black;
+    border: 2px solid #04CCAA;
+}
+
+#edit:hover {
+    background-color: #04CCAA; /* Green */
+    color: white;
+}
+
+
 #footerdesign {
   position: relative;
   bottom: 0;
